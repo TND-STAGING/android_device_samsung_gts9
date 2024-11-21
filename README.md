@@ -1,4 +1,4 @@
-# Android device tree for samsung SM-X816B (gts9p)
+# Android device tree for samsung SM-X716B (gts9)
 
 # How-to compile it:
 
@@ -12,11 +12,11 @@
 ```
  - Clone TheNoobDevs-Staging twrp tree
 ```
-    git clone https://github.com/TND-STAGING/android_device_samsung_gts9p.git -b android-14 device/samsung/gts9p
+    git clone https://github.com/TND-STAGING/android_device_samsung_gts9.git -b android-14 device/samsung/gts9
 ```
  - Prepare
 ```
-    export ALLOW_MISSING_DEPENDENCIES=true; . build/envsetup.sh; lunch twrp_gts9p-eng
+    export ALLOW_MISSING_DEPENDENCIES=true; . build/envsetup.sh; lunch twrp_gts9-eng
 ```
  - Repopick Patches
 ```
