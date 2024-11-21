@@ -12,7 +12,7 @@
 ```
  - Clone TheNoobDevs-Staging twrp tree
 ```
-    git clone https://github.com/TND-STAGING/android_device_samsung_gts9p.git -b twrp-12.1 device/samsung/gts9p
+    git clone https://github.com/TND-STAGING/android_device_samsung_gts9p.git -b android-12.1 device/samsung/gts9p
 ```
  - Build
 ```
