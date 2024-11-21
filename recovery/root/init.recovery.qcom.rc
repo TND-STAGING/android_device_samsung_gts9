@@ -30,8 +30,8 @@ import /init.recovery.samsung.rc
 on init
     write /sys/class/backlight/panel0-backlight/brightness 200
     setprop sys.usb.configfs 1
-    setprop predecrypt.setpatch true
-    setprop predecrypt.loglevel 2
+    setprop prepdecrypt.setpatch true
+    setprop prepdecrypt.loglevel 2
 
 on property:ro.boot.usbcontroller=*
     setprop sys.usb.controller ${ro.boot.usbcontroller}
