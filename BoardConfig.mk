@@ -64,6 +64,12 @@ BOARD_BOOTIMG_HEADER_VERSION := 2
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_PAGESIZE := 4096
 
+# Kernel - prebuilt
+TARGET_FORCE_PREBUILT_KERNEL := true
+TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/kernel
+TARGET_PREBUILT_DTB := $(DEVICE_PATH)/prebuilt/dtb.img
+BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)/prebuilt/dtbo.img
+
 # mkbootimg
 BOARD_MKBOOTIMG_ARGS:= \
 --board=SRPWA25A004 \
@@ -72,13 +78,7 @@ BOARD_MKBOOTIMG_ARGS:= \
 --ramdisk_offset=0x02000000 \
 --tags_offset=0x01e00000 \
 --header_version=$(BOARD_BOOTIMG_HEADER_VERSION) \
---dtb=$(TARGET_PREBUILT_DTB)
-
-# Kernel - prebuilt
-TARGET_FORCE_PREBUILT_KERNEL := true
-TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/kernel
-TARGET_PREBUILT_DTB := $(DEVICE_PATH)/prebuilt/dtb.img
-BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)/prebuilt/dtbo.img
+--dtb=$(DEVICE_PATH)/prebuilt/dtb.img
 
 # Partitions
 BOARD_FLASH_BLOCK_SIZE := 262144 # (BOARD_KERNEL_PAGESIZE * 64)
